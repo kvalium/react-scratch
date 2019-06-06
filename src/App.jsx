@@ -1,11 +1,18 @@
 import React from 'react';
+import { TopBar, Footer } from './components';
+import Router from './Router';
 
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-      <p>{`My API is available at ${process.env.API_URL}!!`}</p>
-    </div>
+    <>
+      <TopBar />
+      <section className="section main-container">
+        <div className="container">
+          <Router />
+        </div>
+      </section>
+      <Footer />
+    </>
   );
 }
 

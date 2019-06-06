@@ -1,0 +1,25 @@
+/** BULMA **/
+@import "bulma/bulma.sass"; // import all bulma fwk...
+
+/** CUSTOM */
+html {
+  overflow-y: auto;
+}
+
+nav.navbar {
+  min-height: inherit;
+  height: 80px;
+}
+
+.main-container {
+  min-height: calc(100vh - 181px);
+}
+
+a.navbar-link.selected{
+  background: darken($primary, 5%);
+}
+
+footer.footer {
+  padding: 20px;
+  height: 100px;
+}

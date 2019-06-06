@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+
+import './styles.scss';
 
 import App from './App';
 
@@ -8,6 +11,8 @@ rootDiv.id = 'root';
 document.getElementsByTagName('body')[0].appendChild(rootDiv);
 
 ReactDOM.render(
-  <App />,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root'),
 );

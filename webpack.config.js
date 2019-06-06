@@ -15,7 +15,7 @@ module.exports = {
     port: 9000,
     hot: true,
   },
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   plugins: [
     new DotEnvPlugin(),
     new CleanWebpackPlugin(),
@@ -54,10 +54,11 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.(s|a)css$/,
         use: [
           'style-loader',
           'css-loader',
+          'sass-loader',
         ],
       },
       {

@@ -8,14 +8,14 @@ Add NPM packages and set git folder
 ```
 yarn init
 git init
-yarn add react react-dom 
+yarn add react react-dom
 ```
 
 Add a `.gitignore` file
 
 ```
 node_modules/
-dist/ 
+dist/
 ```
 
 Create the `src/index.js` entry point:
@@ -39,7 +39,7 @@ ReactDOM.render(
 
 Add packages
 ```
-yarn add -D @babel/core @babel/cli @babel/preset-env @babel/preset-react
+yarn add -D @babel/core @babel/cli @babel/preset-env @babel/preset-react babel-eslint
 ```
 
 Create a `.babelrc` file with:

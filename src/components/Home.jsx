@@ -1,5 +1,14 @@
 import React from 'react';
 
+/**
+ * App Homepage
+ *
+ * * CONCEPTS
+ * * --------
+ * * Stateless component
+ * * JSX Fragment
+ *
+ */
 export default function Home() {
   return (
     <>

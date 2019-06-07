@@ -5,6 +5,12 @@ import pizzaYoloLogo from '../assets/Pizza-Yolo.png';
 
 /**
  * TopBar component
+ *
+ * * CONCEPTS
+ * * --------
+ * * Stateless component
+ * * Picture import
+ * * React Router Link & NavLink (with conditional style)
  */
 export default function TopBar() {
   return (

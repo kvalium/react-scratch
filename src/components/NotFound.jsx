@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 
 /**
  * NotFound Page
+ *
+ * * CONCEPTS
+ * * --------
+ * * Stateless component
+ * * Param destructuring
+ * * JSX Fragment
+ * * Prop type checking and default value
+ *
  * @param {String} errMsg Error message to display
  */
 export default function NotFound({ errMsg }) {

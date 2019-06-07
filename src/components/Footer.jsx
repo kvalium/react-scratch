@@ -1,11 +1,19 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
+/**
+ * App Footer
+ *
+ * * CONCEPTS
+ * * --------
+ * * Stateless component
+ * * React Router Link usage
+ */
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="content has-text-centered">
-        <NavLink to="/admin">Connexion</NavLink>
+        <Link to="/admin">Connexion</Link>
       </div>
     </footer>
   );

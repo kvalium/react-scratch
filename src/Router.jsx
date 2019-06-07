@@ -2,6 +2,15 @@ import React from 'react';
 import { Switch, Route } from 'react-router';
 import { NotFound, Home, PizzaListContainer } from './components';
 
+/**
+ * App Router
+ *
+ * * CONCEPTS
+ * * --------
+ * * React Router Switch
+ * * React Router Routes: default, exact, with param
+ *
+ */
 export default function Router() {
   return (
     <Switch>

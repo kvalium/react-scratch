@@ -1,5 +1,5 @@
 import React from 'react';
-import { TopBar, Footer } from './components';
+import { TopBar, Footer, ErrorBoundary } from './components';
 import Router from './Router';
 
 /**
@@ -15,7 +15,9 @@ function App() {
       <TopBar />
       <section className="section main-container">
         <div className="container">
-          <Router />
+          <ErrorBoundary>
+            <Router />
+          </ErrorBoundary>
         </div>
       </section>
       <Footer />

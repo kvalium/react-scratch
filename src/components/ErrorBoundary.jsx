@@ -28,8 +28,8 @@ export default class ErrorBoundary extends React.Component {
   /**
    * Error notifier
    *
-   * @param {*} error Triggered technical error
-   * @param {*} info human friendly message
+   * @param {Error} error Triggered technical error
+   * @param {string} info human friendly message
    */
   componentDidCatch(error, info) {
     // You can also log the error to an error reporting service

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
-import { NotFound, Home, PizzaListContainer } from './components/Pizza';
+import { Home, PizzaListContainer, Pizza } from './components/Pizza';
+import { NotFound } from './components/Struct';
 
 /**
  * App Router
@@ -16,6 +17,7 @@ export default function Router() {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/pizzas" component={PizzaListContainer} />
+      <Route path="/pizza/:id" component={Pizza} />
       <Route component={NotFound} />
     </Switch>
   );

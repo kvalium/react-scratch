@@ -24,15 +24,7 @@ export default function TopBar() {
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
           <Link to="/" className="navbar-item">Accueil</Link>
-          <div className="navbar-item has-dropdown is-hoverable">
-            <NavLink to="/pizzas" className="navbar-link" activeClassName="selected">Nos Pizzas</NavLink>
-
-            <div className="navbar-dropdown">
-              <NavLink to="/pizza/regina" className="navbar-item">Regina</NavLink>
-              <NavLink to="/pizza/calzone" className="navbar-item">Calzone</NavLink>
-              <NavLink to="/pizza/marina" className="navbar-item">Marina</NavLink>
-            </div>
-          </div>
+          <NavLink to="/pizzas" className="navbar-item" activeClassName="selected">Nos Pizzas</NavLink>
         </div>
       </div>
     </nav>

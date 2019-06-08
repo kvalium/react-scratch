@@ -19,7 +19,9 @@ import PizzaCard from './PizzaCard';
  * @param {array} selection array of selected pizzas matching filters
  * @param {number} total total number of available pizzas
  */
-export default function PizzaList({ onSearchChange, selection, total }) {
+export default function PizzaList({
+  onSearchChange, onAddToCart, selection, total,
+}) {
   const hasSelection = selection.length !== 0;
   return (
     <>
@@ -35,12 +37,11 @@ export default function PizzaList({ onSearchChange, selection, total }) {
       </h5>
       <div className="columns is-multiline">
         {selection.map(pizza => (
-          <div key={pizza.id} className="column is-3">
-            <PizzaCard {...pizza} />
+          <div key={pizza.id} className="column is-4">
+            <PizzaCard pizza={pizza} onAddToCart={onAddToCart} />
           </div>
         ))}
       </div>
-
     </>
   );
 }
@@ -52,6 +53,7 @@ PizzaList.propTypes = {
   })),
   onSearchChange: PropTypes.func.isRequired,
   total: PropTypes.number,
+  onAddToCart: PropTypes.func.isRequired,
 };
 
 PizzaList.defaultProps = {

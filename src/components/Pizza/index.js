@@ -5,5 +5,4 @@
  *
  */
 export { default as Home } from './Home';
-export { default as PizzaListContainer } from './PizzaListContainer';
-export { default as PizzaContainer } from './PizzaContainer';
+export { default as Pizzas } from './Pizzas';

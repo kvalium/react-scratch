@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PizzaList from './PizzaList';
+import PropTypes from 'prop-types';
 
-import { fetchPizzas } from '../../services/fetchPizzas';
+import PizzaList from './PizzaList';
 
 /**
  * PizzaListContainer container for the pizzaList component
@@ -21,19 +21,20 @@ import { fetchPizzas } from '../../services/fetchPizzas';
 export default class PizzaListContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = { loading: true, pizzas: [], selection: [] };
-  }
-
-  componentDidMount() {
-    fetchPizzas().then(pizzas => this.setState({ pizzas, selection: pizzas, loading: false }));
+    this.state = {
+      selection: props.pizzas,
+    };
   }
 
   /**
    * Prevent pizza list re-render if not modified
-   * @param {*} _ NextProps, unused
+   *
+   * * BONUS
+   *
+   * @param {*} _nextProps NextProps, unused
    * @param {*} nextState future state
    */
-  shouldComponentUpdate(_, nextState) {
+  shouldComponentUpdate(_nextProps, nextState) {
     const { selection } = this.state;
     if (JSON.stringify(nextState.selection) === JSON.stringify(selection)) {
       return false;
@@ -42,19 +43,43 @@ export default class PizzaListContainer extends Component {
   }
 
   /**
+   * on search handler
    *
+   * * BONUS
    */
   onSearch = (e) => {
-    const { pizzas } = this.state;
+    const { pizzas } = this.props;
     const searchTerm = e.target.value;
-    const selectedPizzas = pizzas
-      .filter(pizza => pizza.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    const selectedPizzas = pizzas.filter(
+      pizza => pizza.name.toLowerCase().includes(searchTerm.toLowerCase()),
+    );
     this.setState({ selection: selectedPizzas });
   }
 
   render() {
-    const { pizzas, selection, loading } = this.state;
-    if (loading) return <p>Chargement...</p>;
-    return <PizzaList onSearchChange={this.onSearch} selection={selection} total={pizzas.length} />;
+    const { selection } = this.state;
+    const { pizzas, onAddToCart } = this.props;
+    return (
+      <>
+        <PizzaList
+          onSearchChange={this.onSearch}
+          onAddToCart={onAddToCart}
+          selection={selection}
+          total={pizzas.length}
+        />
+      </>
+    );
   }
 }
+
+PizzaListContainer.propTypes = {
+  pizzas: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      desc: PropTypes.string,
+      price: PropTypes.number,
+    }),
+  ).isRequired,
+  onAddToCart: PropTypes.func.isRequired,
+};

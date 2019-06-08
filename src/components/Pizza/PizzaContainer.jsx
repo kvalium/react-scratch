@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Pizza from './Pizza';
 
 import { fetchPizza } from '../../services/fetchPizzas';
@@ -10,7 +12,8 @@ export default class PizzaContainer extends Component {
   }
 
   componentDidMount() {
-    fetchPizza(this.props.match.params.id).then(pizza => this.setState(pizza)).catch((e) => {
+    const { match } = this.props;
+    fetchPizza(match.params.id).then(pizza => this.setState(pizza)).catch((e) => {
       this.setState({ hasError: e }); // Catching error, but the UI is not aware of it
     });
   }
@@ -21,3 +24,11 @@ export default class PizzaContainer extends Component {
     return pizza ? <Pizza {...pizza} /> : <h1>Chargement...</h1>;
   }
 }
+
+PizzaContainer.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.number,
+    }),
+  }).isRequired,
+};

@@ -33,7 +33,14 @@ export default function PizzaList({ onSearchChange, selection, total }) {
           <>{`${selection.length}/${total} pizzas affichées.`}</>
         )}
       </h5>
-      {selection.map(pizza => <PizzaCard {...pizza} />)}
+      <div className="columns is-multiline">
+        {selection.map(pizza => (
+          <div className="column is-one-quarter">
+            <PizzaCard {...pizza} />
+          </div>
+        ))}
+      </div>
+
     </>
   );
 }

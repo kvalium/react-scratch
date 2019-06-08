@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import logErrorToMyService from '../services/logErrorService';
+import logErrorToMyService from '../../services/logErrorService';
 
 /**
  * Error Boundary Component handles errors happening in the app, provides a fallback UI

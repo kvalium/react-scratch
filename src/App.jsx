@@ -1,5 +1,5 @@
 import React from 'react';
-import { TopBar, Footer, ErrorBoundary } from './components';
+import { TopBar, Footer, ErrorBoundary } from './components/Struct';
 import Router from './Router';
 
 /**

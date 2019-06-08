@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
-import { NotFound, Home, PizzaListContainer } from './components';
+import { NotFound, Home, PizzaListContainer } from './components/Pizza';
 
 /**
  * App Router

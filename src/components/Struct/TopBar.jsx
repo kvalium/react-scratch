@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-import pizzaYoloLogo from '../assets/Pizza-Yolo.png';
+import pizzaYoloLogo from '../../assets/Pizza-Yolo.png';
 
 /**
  * TopBar component

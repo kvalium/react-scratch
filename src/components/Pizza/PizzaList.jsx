@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PizzaCard from './PIzzaCard';
 
 /**
  * Pizzalist diplays list of available pizzas and allow to filter them.
@@ -12,6 +13,7 @@ import PropTypes from 'prop-types';
  * * JSX conditional syntax
  * * JSX lists and keys
  * * JSX Fragment
+ * * Props destructuring
  *
  * @param {func} onSearchChange search handler on pizza list
  * @param {array} selection array of selected pizzas matching filters
@@ -31,27 +33,7 @@ export default function PizzaList({ onSearchChange, selection, total }) {
           <>{`${selection.length}/${total} pizzas affichées.`}</>
         )}
       </h5>
-
-      {hasSelection && (
-        <table className="table is-striped is-fullwidth">
-          <thead>
-            <tr>
-              <th>Pizza</th>
-              <th>Desc.</th>
-              <th>Prix TTC</th>
-            </tr>
-          </thead>
-          <tbody>
-            {selection.map(({ name, desc, price }) => (
-              <tr key={name}>
-                <th>{name}</th>
-                <td>{desc}</td>
-                <td>{`${price} €`}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+      {selection.map(pizza => <PizzaCard {...pizza} />)}
     </>
   );
 }

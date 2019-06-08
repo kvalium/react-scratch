@@ -1,6 +1,5 @@
 import React from 'react';
-import { TopBar, Footer, ErrorBoundary } from './components/Struct';
-import Router from './Router';
+import Pizzas from './components/Pizza/Pizzas';
 
 /**
  * * CONCEPTS
@@ -11,17 +10,7 @@ import Router from './Router';
  */
 function App() {
   return (
-    <>
-      <TopBar />
-      <section className="section main-container">
-        <div className="container">
-          <ErrorBoundary>
-            <Router />
-          </ErrorBoundary>
-        </div>
-      </section>
-      <Footer />
-    </>
+    <Pizzas />
   );
 }
 

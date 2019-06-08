@@ -9,6 +9,6 @@
   { "id": 8, "name": "Capricciosa", "desc": "mozzarella, champignons, artichaut, jambon, olives, huile d'olive", "price": 17 },
   { "id": 9, "name": "Quatre saisons", "desc": "généralement les mêmes ingrédients qu'une capricciosa selon les saisons", "price": 17 },
   { "id": 10, "name": "Quatre fromages", "desc": "mozzarella et d'autres fromages, variant selon les spécialités locales", "price": 18 },
-  { "id": 11, "name": "Calzone", "desc": "garnie de mozzarella, jambon, champignons, sauce tomate, œufs ou autres ingrédients", "price": 18 },
+  { "id": 11, "name": "Calzone", "desc": "mozzarella, jambon, champignons, sauce tomate, œufs", "price": 18 },
   { "id": 12, "name": "Hawaïenne", "desc": "tomate, mozzarella, jambon, ananas", "price": 15 }
 ]

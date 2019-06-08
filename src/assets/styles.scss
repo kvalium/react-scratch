@@ -19,11 +19,14 @@ a.navbar-link.selected{
   background: darken($primary, 5%);
 }
 
-a.pizza-link .card {
-  transition: all .15s;
+.pizza-link .card {
+  transition: all .5s;
   &:hover{
-    transform: scale(1.04);
+    //transform: scale(1.04);
     box-shadow: 0 2px 3px $primary, 0 0 0 1px $primary;
+  }
+  .card-content .content{
+    min-height: 50px;
   }
 }
 

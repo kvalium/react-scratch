@@ -35,7 +35,7 @@ export default function PizzaList({ onSearchChange, selection, total }) {
       </h5>
       <div className="columns is-multiline">
         {selection.map(pizza => (
-          <div key={pizza.id} className="column is-one-quarter">
+          <div key={pizza.id} className="column is-3">
             <PizzaCard {...pizza} />
           </div>
         ))}

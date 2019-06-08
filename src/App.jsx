@@ -11,17 +11,15 @@ import Router from './Router';
  */
 function App() {
   return (
-    <>
+    <ErrorBoundary>
       <TopBar />
       <section className="section main-container">
         <div className="container">
-          <ErrorBoundary>
-            <Router />
-          </ErrorBoundary>
+          <Router />
         </div>
       </section>
       <Footer />
-    </>
+    </ErrorBoundary>
   );
 }
 

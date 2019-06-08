@@ -19,6 +19,14 @@ a.navbar-link.selected{
   background: darken($primary, 5%);
 }
 
+a.pizza-link .card {
+  transition: all .15s;
+  &:hover{
+    transform: scale(1.04);
+    box-shadow: 0 2px 3px $primary, 0 0 0 1px $primary;
+  }
+}
+
 footer.footer {
   padding: 20px;
   height: 100px;

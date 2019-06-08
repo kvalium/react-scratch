@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
-import { Home, PizzaListContainer, Pizza } from './components/Pizza';
+import { Home, PizzaListContainer, PizzaContainer } from './components/Pizza';
 import { NotFound } from './components/Struct';
 
 /**
@@ -17,7 +17,7 @@ export default function Router() {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/pizzas" component={PizzaListContainer} />
-      <Route path="/pizza/:id" component={Pizza} />
+      <Route path="/pizza/:id" component={PizzaContainer} />
       <Route component={NotFound} />
     </Switch>
   );

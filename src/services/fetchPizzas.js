@@ -15,7 +15,7 @@ const fetchPizzas = () => (
 const fetchPizza = id => (
   new Promise((resolve, reject) => {
     fetchPizzas().then((pizzas) => {
-      const selectedPizza = pizzas.find(p => p.id === id);
+      const selectedPizza = pizzas.find(p => p.id === parseInt(id, 10));
       if (selectedPizza) {
         resolve(selectedPizza);
       }

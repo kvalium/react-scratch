@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PizzaCard from './PIzzaCard';
+import PizzaCard from './PizzaCard';
 
 /**
  * Pizzalist diplays list of available pizzas and allow to filter them.

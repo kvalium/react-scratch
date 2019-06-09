@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 import PizzaCart from './PizzaCart';
 
+/**
+ * Pizza Cart container
+ * 
+ * * CONCEPTS
+ * * --------
+ * * stateful component
+ * * lifecycle: componentDidMount, componentDidUpdate
+ */
 export default class PizzaCartContainer extends Component {
   constructor(props) {
     super(props);

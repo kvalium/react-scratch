@@ -12,11 +12,9 @@ import PizzaList from './PizzaList';
  * * --------
  * * stateful container
  * * State initialization
- * * Basic lifecyle: contructor, componentDidMount
  * * Advanced lifecycle: shouldComponentUpdate
  * * Event handler
- * * Conditional rendering based upon state
- *
+ * * Prop types checking
  */
 export default class PizzaListContainer extends Component {
   constructor(props) {

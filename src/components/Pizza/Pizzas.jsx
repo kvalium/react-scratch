@@ -4,6 +4,16 @@ import { fetchPizzas } from '../../services/fetchPizzas';
 import PizzaListContainer from './PizzaListContainer';
 import PizzaCartContainer from './PizzaCartContainer';
 
+/**
+ * Pizzas Component: Domain entry point
+ *
+ * * CONCEPTS
+ * * --------
+ * * Stateful class
+ * * Component DidMount
+ * * Async treatment
+ * * handler
+ */
 export default class Pizzas extends Component {
   constructor(props) {
     super(props);

@@ -1,5 +1,15 @@
 import React from 'react';
 
+/**
+ * Pizza Cart component
+ * 
+ * * CONCEPTS
+ * * --------
+ * * JSX Lists
+ * 
+ * @param {object[]} cart all added to cart pizzas
+ * @param {number} total total amount of cart
+ */
 export default function PizzaCart({ cart, total }) {
   return (
     <>

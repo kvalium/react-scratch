@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { connect } from 'react-redux';
+import { addToCart } from '../../store/actions/pizzaAction';
+
 import PizzaList from './PizzaList';
 
 /**
@@ -16,7 +19,7 @@ import PizzaList from './PizzaList';
  * * Event handler
  * * Prop types checking
  */
-export default class PizzaListContainer extends Component {
+export class PizzaListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -61,7 +64,7 @@ export default class PizzaListContainer extends Component {
       <>
         <PizzaList
           onSearchChange={this.onSearch}
-          onAddToCart={onAddToCart}
+          onAddToCart={id => onAddToCart(pizzas.find(p => p.id === id))}
           selection={selection}
           total={pizzas.length}
         />
@@ -81,3 +84,16 @@ PizzaListContainer.propTypes = {
   ).isRequired,
   onAddToCart: PropTypes.func.isRequired,
 };
+
+const mapStateToProps = state => ({
+  pizzas: state.pizzas.pizzaList,
+});
+
+const mapDispatchToProps = dispatch => ({
+  onAddToCart: pizza => dispatch(addToCart(pizza)),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(PizzaListContainer);

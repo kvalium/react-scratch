@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 import PizzaCart from './PizzaCart';
 
 /**
@@ -10,7 +12,7 @@ import PizzaCart from './PizzaCart';
  * * stateful component
  * * lifecycle: componentDidMount, componentDidUpdate
  */
-export default class PizzaCartContainer extends Component {
+export class PizzaCartContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { total: 0 };
@@ -50,3 +52,9 @@ export default class PizzaCartContainer extends Component {
     return <PizzaCart cart={cart} total={total} />;
   }
 }
+
+const mapStateToProps = state => ({
+  cart: state.pizzas.cart,
+});
+
+export default connect(mapStateToProps)(PizzaCartContainer);

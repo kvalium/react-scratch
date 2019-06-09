@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div
+  className="pizza-link"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-9"
+            >
+              <p
+                className="title is-4"
+              >
+                Calzone
+              </p>
+            </div>
+            <div
+              className="column is-3"
+            >
+              <p
+                className="title is-4 has-text-primary"
+              >
+                10 €
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="content"
+      >
+        fake pizza
+      </div>
+      <button
+        className="button is-primary is-small is-rounded"
+        onClick={[Function]}
+        type="button"
+      >
+        Ajouter au panier
+      </button>
+    </div>
+  </div>
+</div>
+`;
